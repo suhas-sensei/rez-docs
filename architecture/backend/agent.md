@@ -18,7 +18,7 @@ When a decision is requested, the agent assembles a comprehensive context payloa
 
 The interaction follows a strict multi-turn sequence to ensure the model has all necessary data before deciding.
 
-```mmd
+```mermaid
 sequenceDiagram
     participant Agent as TradingAgent (Backend)
     participant LLM as AI Model (OpenRouter)
