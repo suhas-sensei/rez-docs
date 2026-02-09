@@ -16,8 +16,9 @@ Recursive indicators like the Exponential Moving Average (EMA) and Relative Stre
 $$L_{fetch} = \max(100, N_{results} \times 3)$$
 
 Where:
-*   $L_{fetch}$ is the number of candles fetched.
-*   $N_{results}$ is the number of indicator values the agent requested.
+- `L_fetch` is the number of candles fetched.
+- `N_results` is the number of indicator values the agent requested.
+
 
 ### Rationale
 By fetching three times the required data, the recursive calculation has sufficient "burn-in" time. For an EMA with a period of 20, the weighting of the first (and most inaccurate) data point is reduced significantly by the time the latest candle is reached.
