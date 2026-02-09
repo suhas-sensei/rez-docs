@@ -67,7 +67,7 @@
 
 ###  Portfolio UI & Agent Stats Update
 
-- 🧠 Added visual **Agent Stats Circles** in Growth view  
+- Added visual **Agent Stats Circles** in Growth view  
 -  Removed Agent Stats tab from dashboard  
 -  Logout support with session reset  
 -  Wallet address display with copy action  
