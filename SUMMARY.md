@@ -23,3 +23,5 @@
 
 ## Deployment
 - [Configuration & Deploy](deployment.md)
+
+- [Changelog](changelog.md)
