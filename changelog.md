@@ -20,19 +20,6 @@
 - FIFO matching of opening fills to closing fills
 - `formatHoldingTime()` helper for human-readable duration
 
-#### Documentation
-- Aave-style documentation in `/documentation/`
-  - `overview.md` - Project introduction
-  - `getting-started.md` - Setup guide
-  - `api-reference.md` - API endpoints
-  - `concepts.md` - Core concepts
-  - `dashboard.md` - Dashboard usage
-  - `troubleshooting.md` - Common issues
-  - `README.md` - Documentation index
-
-#### Skills
-- `docs-writer` skill for documentation tasks
-
 ### Changed
 
 #### API
@@ -53,12 +40,11 @@
 ---
 
 ### Global Currency & Timezone Support
-**platform** · January 2026
 
 #### Highlights
-- 💱 Unified currency conversion across dashboard
-- 🕒 Timezone-aware timestamps for logs & trades
-- ⚙️ Centralized formatting via global contexts
+-  Unified currency conversion across dashboard
+-  Timezone-aware timestamps for logs & trades
+- Centralized formatting via global contexts
 
 ####  Updated Areas
 - Portfolio balance & P&L
@@ -79,13 +65,12 @@
 
 ---
 
-### 📈 Portfolio UI & Agent Stats Update
-**ui** · January 2026
+###  Portfolio UI & Agent Stats Update
 
 - 🧠 Added visual **Agent Stats Circles** in Growth view  
-- 📊 Removed Agent Stats tab from dashboard  
-- 🚪 Logout support with session reset  
-- 🔗 Wallet address display with copy action  
-- ✨ Improved spacing, scrolling, and responsiveness
+-  Removed Agent Stats tab from dashboard  
+-  Logout support with session reset  
+-  Wallet address display with copy action  
+-  Improved spacing, scrolling, and responsiveness
 
-> Performance insights are now visual-first and easier to scan.
+> Performance insights are visually informative with metrics.
