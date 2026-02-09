@@ -16,7 +16,7 @@ Recursive indicators like the Exponential Moving Average (EMA) and Relative Stre
 $$L_{fetch} = \max(100, N_{results} \times 3)$$
 
 Where:
-- `L_fetch` is the number of candles fetched.
+- $L_{\text{fetch}}$ is the number of candles fetched.
 
 
 - `N_results` is the number of indicator values the agent requested.
