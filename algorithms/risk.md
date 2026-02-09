@@ -1,4 +1,4 @@
-# Algorithm: Risk Management
+# Risk Management
 
 Risk management in Rez is a deterministic layer that caps the agent's ambition. This section covers the mathematical formulas used to calculate position size, leverage, and stop-loss levels.
 
@@ -9,9 +9,8 @@ The size of a trade is calculated as a percentage of the total account equity, g
 $$Size_{USD} = Equity_{Total} \times \frac{Allocation_{\%}}{100}$$
 
 ### Minimum Order Enforcement
-Hyperliquid and other exchanges have minimum order sizes. Rez ensures:
-$$Size_{final} = \max(Size_{USD}, 12.0)$$
-*The $12.0 value provides a safe buffer above the standard $10.0 minimum.*
+
+Hyperliquid and other exchanges have minimum order sizes. Rez ensures: $$Size_{final} = \max(Size_{USD}, 12.0)$$ _The $12.0 value provides a safe buffer above the standard $10.0 minimum._
 
 ## Leverage and Margin
 
@@ -24,12 +23,12 @@ $$Margin_{Required} = \frac{Size_{final}}{Leverage}$$
 While the LLM can suggest arbitrary TP/SL prices, it is often instructed to use the **Average True Range (ATR)** for more robust risk management.
 
 ### Stop-Loss (SL) Calculation
-The SL is typically set at a multiple of ATR from the entry price ($P_{entry}$).
 
-$$SL_{Long} = P_{entry} - (k \times ATR)$$
-$$SL_{Short} = P_{entry} + (k \times ATR)$$
+The SL is typically set at a multiple of ATR from the entry price ($P\_{entry}$).
 
-*Where $k$ (the "ATR Multiplier") is typically between 1.5 and 3.0.*
+$$SL_{Long} = P_{entry} - (k \times ATR)$$ $$SL_{Short} = P_{entry} + (k \times ATR)$$
+
+_Where k (the "ATR Multiplier") is typically between 1.5 and 3.0._
 
 ## Reward-to-Risk Ratio (RRR)
 
@@ -37,7 +36,7 @@ Rez validates that any trade decision meets a minimum efficiency threshold.
 
 $$RRR = \frac{|P_{target} - P_{entry}|}{|P_{stop} - P_{entry}|}$$
 
-**Validation Rule**: If $RRR < 1.5$, the agent is often prompted to reconsider the trade, as the potential gain does not sufficiently compensate for the risk taken.
+**Validation Rule**: If $$RRR < 1.5$$, the agent is often prompted to reconsider the trade, as the potential gain does not sufficiently compensate for the risk taken.
 
 ## Drawdown Protection
 
