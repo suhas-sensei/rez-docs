@@ -10,23 +10,23 @@ The following diagram illustrates the primary components and the flow of data du
 
 ## Core Component Responsibilities
 
-### ⚙️ Main Control Loop (`src/main.py`)
+#### Main Control Loop (`src/main.py`)
 
 The "heartbeat" of the system. It manages the execution timing (intervals), error handling, and orchestrates the transition between state synchronization, decision making, and execution.
 
-### 🧠 Decision Agent (`src/agent/`)
+#### Decision Agent (`src/agent/`)
 
 The reasoning engine. It takes the structured market context and uses LLMs to generate trade theses. It specifically manages the multi-turn tool-calling loop to ensure high-confluence decisions.
 
-### 📊 Indicator Engine (`src/indicators/`)
+#### Indicator Engine (`src/indicators/`)
 
 The computational layer. It fetches raw candle data from Binance and uses `pandas-ta` to calculate technical indicators locally. This ensures that the agent always works with mathematically accurate, non-lagging data.
 
-### 💸 Trading Engine (`src/trading/`)
+#### Trading Engine (`src/trading/`)
 
 The interface to the Hyperliquid exchange. It handles authentication, signing of transactions, and manages the placement of both market orders and secondary trigger orders (Take-Profit/Stop-Loss).
 
-### 🖥️ Monitoring Dashboard (`frontend/`)
+#### Monitoring Dashboard (`frontend/`)
 
 A real-time visualization layer that consumes the backend's `diary.jsonl` to display PnL tracker, active positions, and the agent's internal reasoning logs.
 
