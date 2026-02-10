@@ -6,36 +6,7 @@ Rez is designed as an asynchronous, event-driven trading system. It operates in 
 
 The following diagram illustrates the primary components and the flow of data during a single trading cycle.
 
-```mermaid
-  graph TD
-      subgraph "External World"
-        HL[Hyperliquid L1]
-        BN[Binance API]
-        OR[OpenRouter / LLM]
-    end
-
-    subgraph "Rez Backend (Python)"
-        Main[Main Loop]
-        Trader[Hyperliquid Trader]
-        Agent[Decision Agent]
-        Calc[Indicator Calculator]
-    end
-
-    subgraph "Monitoring"
-        Dashboard[Tailwind Dashboard]
-        Diary[diary.jsonl]
-    end
-
-    Main -->|Fetch State| HL
-    Main -->|Fetch Klines| BN
-    Main -->|Process Metrics| Calc
-    Main -->|Request Decision| Agent
-    Agent <-->|ReAct Loop| Calc
-    Agent -->|Issue JSON Decision| Main
-    Main -->|Execute Order| HL
-    Main -->|Log Rationale| Diary
-    Diary -->|Sync API| Dashboard
-```
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ## Core Component Responsibilities
 

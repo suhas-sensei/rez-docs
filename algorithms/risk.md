@@ -10,7 +10,8 @@ $$Size_{USD} = Equity_{Total} \times \frac{Allocation_{\%}}{100}$$
 
 ### Minimum Order Enforcement
 
-Hyperliquid and other exchanges have minimum order sizes. Rez ensures: $$Size_{final} = \max(Size_{USD}, 12.0)$$ _The $12.0 value provides a safe buffer above the standard $10.0 minimum._
+Hyperliquid and other exchanges have minimum order sizes. \
+Rez ensures: $$Size_{final} = \max(Size_{USD}, 12.0)$$ _The $12.0 value provides a safe buffer above the standard $10.0 minimum._
 
 ## Leverage and Margin
 
@@ -24,7 +25,7 @@ While the LLM can suggest arbitrary TP/SL prices, it is often instructed to use 
 
 ### Stop-Loss (SL) Calculation
 
-The SL is typically set at a multiple of ATR from the entry price ($P\_{entry}$).
+The SL is typically set at a multiple of ATR from the entry price $P\_{entry}$.
 
 $$SL_{Long} = P_{entry} - (k \times ATR)$$ $$SL_{Short} = P_{entry} + (k \times ATR)$$
 
