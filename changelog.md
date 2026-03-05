@@ -1,8 +1,84 @@
 ## 2026
 
-### February 6
+
+### March 5 — Mainnet Launch
 ---
-testing
+### Changes
+
+#### Mainnet Migration
+- Rez is now live on **Hyperliquid mainnet** with all trades and transactions executing on real funds
+- Wallet automatically switches to **Arbitrum mainnet** when approving an agent
+- Transaction links now open on the mainnet explorer
+
+#### Authentication & Deployment
+- Integrated **Privy** authentication for production sign-in
+- Production-ready Docker deployment configured
+
+#### UI Updates
+- Testnet mode under maintenance, currently configured for mainnet only. 
+
+### February 25
+---
+### Changes
+
+#### Branding & Copy
+- Updated hero text from "The Future of Perps" to "Your personal Quant for perps"
+
+#### Portfolio & Dashboard
+- Relocated logout button to bottom of action buttons
+- Added border styling to stat cards (Total Balance, Unrealized P&L, Margin Used)
+- Removed desktop "waiting for agent" input section from TradesDashboard
+
+#### Leaderboard
+- Replaced leaderboard table with "Coming Soon" placeholder
+- Removed mock leaderboard data and helper functions
+
+
+### February 17
+---
+### Changes
+
+#### UI Overhaul
+- Removed typewriter animation, switched to static content display
+- Standardized border radius and background shading across all pages
+- Moved `PortfolioHeader` to display consistently across all tabs
+- Added `InlineTicker` to Navbar
+
+#### Agent Process Management
+- Added `force_stop()` with SIGTERM → SIGKILL fallback for reliable process termination
+- Agents no longer auto-start on server startup
+
+#### P&L & Risk Profile
+- Changed P&L calculation to use fixed initial deposit ($500) instead of net deposits
+- Removed P&L percentage display from PortfolioHeader
+- Increased border color intensity on risk profile selector
+
+
+### February 12
+---
+### Changes
+
+#### Responsiveness
+- Further responsive design improvements across the app
+
+#### Bug Fixes & UI
+- General bug fixes
+- Updated app icons
+
+#### Stop/Pause Button UI
+- Updated stop and pause button interface
+
+### February 10
+---
+### Changes
+
+#### Invite Code System
+- Added invite code functionality for gated access
+
+#### Migration to Prod
+- Consolidated completed trades dashboard, P&L calculations, and holding time tracking into production
+- Integrated comprehensive documentation suite (overview, getting-started, API reference, concepts, dashboard usage, troubleshooting)
+
 ### February 3
 ---
 ### Changes
